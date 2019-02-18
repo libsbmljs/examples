@@ -1,5 +1,5 @@
-describe("Arrays test", function() {
-  it('Tests the arrays package (2/3)', (done) => {
+import libsbml from 'libsbmljs_experimental'
+
     libsbml().then((libsbml) => {
         try {
           // create new document
@@ -7,7 +7,6 @@ describe("Arrays test", function() {
 
           doc.enablePackage(libsbml.ArraysExtension.prototype.getXmlnsL3V1V1(), 'arrays', true)
           doc.setPackageRequired("arrays", true)
-          expect(doc.isPackageEnabled('arrays')).toEqual(true)
 
           const model = doc.createModel()
 
@@ -62,25 +61,11 @@ describe("Arrays test", function() {
           const writer = new libsbml.SBMLWriter()
           const serializedSBML = writer.writeSBMLToString(doc)
 
-          // make sure the expected tags are there
-          expect(serializedSBML).toContain('arrays:listOfDimensions')
-          expect(serializedSBML).toContain('arrays:dimension')
-
-          const reader = new libsbml.SBMLReader()
-
-          const doc_after = reader.readSBMLFromString(serializedSBML)
-
-          expect(doc_after.getNumErrors()).toEqual(0)
-          expect(doc_after.isPackageEnabled('arrays')).toEqual(true)
+          console.log(serializedSBML)
 
           libsbml.destroy(doc)
-          libsbml.destroy(doc_after)
         } catch(error) {
           fail(error)
           console.log(error.stack)
-        } finally {
-          done()
         }
     })
-  })
-})
