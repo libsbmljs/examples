@@ -8,7 +8,7 @@ These scripts use newer JavaScript features like `import` so you need to run the
 
 Make sure you have Node.js 10.15.0 or later before starting.
 
-## Getting Started
+## Prerequisites
 
 The first step is to install all dependencies by running the following on the command line:
 
@@ -19,7 +19,11 @@ npm install
 This should create the directory `node_modules` and install (among other things)
 the `libsbmljs_core`, `libsbmljs_stable`, and `libsbmljs_experimental` npm packages.
 
-### Running the Node Examples
+## Contents
+
+This repository has three directories - "core", "stable", and "experimental," because libsbmljs has three builds: "libsbmljs_core", "libsbmljs_stable", and "libsbmljs_experimental". The difference is the number of supported packages in each build.
+
+## Running the Node Examples
 
 To run one of the included Node.js example scripts, you can use babel-node from the command line:
 
@@ -71,7 +75,7 @@ After running this command, you should see the following text appear on the comm
 These Node.js examples are taken mainly from the official [libSBML C++ examples](http://sbml.org/Software/libSBML/5.17.0/docs//cpp-api/libsbml-example-files.html). The JavaScript versions here are intended to show how accomplish the same respective tasks with libsbmljs. The examples typically create an SBML file and print the results to the console.
 There are three directories - "core", "stable", and "experimental," which each make use of the respective libsbmljs npm package ("libsbmljs_core", "libsbmljs_stable", and "libsbmljs_experimental").
 
-### Running the Webpack Example
+## Running the Webpack Example
 
 To use libsbmljs in the browser, you will most likely end up using Webpack to bundle all of the JavaScript assets used in your site.
 Using Emscripten modules like libsbmljs with Webpack can be a little tricky, and, because this is such a common use case, we provide an example to show you the basics. Another, more complicated, resource would be the source code for the [libsbmljs official demo](https://github.com/libsbmljs/demo).
