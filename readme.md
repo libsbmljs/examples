@@ -68,7 +68,7 @@ After running this command, you should see the following text appear on the comm
 </sbml>
 ```
 
-These Node.js examples typically create an SBML file and print the results to the console.
+These Node.js examples are taken mainly from the official [libSBML C++ examples](http://sbml.org/Software/libSBML/5.17.0/docs//cpp-api/libsbml-example-files.html). The JavaScript versions here are intended to show how accomplish the same respective tasks with libsbmljs. The examples typically create an SBML file and print the results to the console.
 There are three directories - "core", "stable", and "experimental," which each make use of the respective libsbmljs npm package ("libsbmljs_core", "libsbmljs_stable", and "libsbmljs_experimental").
 
 ### Running the Webpack Example

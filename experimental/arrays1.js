@@ -76,7 +76,6 @@ libsbml().then((libsbml) => {
 
       libsbml.destroy(doc)
     } catch(error) {
-      fail(error)
       console.log(error.stack)
     }
 })

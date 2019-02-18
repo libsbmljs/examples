@@ -65,7 +65,6 @@ import libsbml from 'libsbmljs_experimental'
 
           libsbml.destroy(doc)
         } catch(error) {
-          fail(error)
           console.log(error.stack)
         }
     })
