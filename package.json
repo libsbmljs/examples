@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/libsbmljs/examples#readme",
   "dependencies": {
-    "libsbmljs_experimental": "^5.17.2-alpha2"
+    "libsbmljs_experimental": "^5.17.2-beta1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
